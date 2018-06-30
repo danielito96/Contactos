@@ -10,7 +10,9 @@
             <Entry x:Name="telefonoEntry" Placeholder="Telefono" Keyboard="Telephone"/>
             <Button Text="Listo!"></Button>
             <Entry Text="Prueba Estidolos" />
+            <Entry Text="Prueba Estidolos con llave" Style="{StaticResource estiloAdicional}"/>
             
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+ 
