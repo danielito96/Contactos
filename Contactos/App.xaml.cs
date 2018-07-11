@@ -14,6 +14,17 @@ namespace Contactos
             MainPage = new MainPage();
         }
 
+        public static String RUTA_BD;
+
+        public App(String ruta_bd)
+        {
+            InitializeComponent();
+
+            MainPage = new MainPage();
+
+            RUTA_BD = ruta_bd;
+        }
+
         protected override void OnStart()
         {
             // Handle when your app starts
