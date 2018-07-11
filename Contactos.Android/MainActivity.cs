@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
 
 namespace Contactos.Droid
 {
@@ -20,7 +21,12 @@ namespace Contactos.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+
+            string nombreArchivo = "bd_contactos.sqlite";
+            string rutaCarperta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string rutaCompleta = Path.Combine(rutaCarperta, nombreArchivo); 
+
+            LoadApplication(new App(rutaCompleta));
         }
     }
 }
