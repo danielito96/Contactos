@@ -11,7 +11,7 @@ namespace Contactos
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         public static String RUTA_BD;
@@ -20,7 +20,7 @@ namespace Contactos
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
 
             RUTA_BD = ruta_bd;
         }

@@ -4,14 +4,10 @@
              xmlns:local="clr-namespace:Contactos" 
              x:Class="Contactos.MainPage">
 
-             <ListView>
-        <ListView.ItemTemplate>
+    <ContentPage.ToolbarItems>
 
-        <DataTemplate>
-                <TextCell Text="" Detail=""/>
-            </DataTemplate>
-            
-        </ListView.ItemTemplate>
-    </ListView>
+        <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"/>
+        
+    </ContentPage.ToolbarItems>
     
 </ContentPage>

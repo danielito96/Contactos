@@ -4,14 +4,23 @@
              x:Class="Contactos.NuevoContactoPage">
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Entry x:Name="nombreEntry" Placeholder="Nombre"/>
-            <Entry x:Name="apellidoEntry" Placeholder="Apellido"/>
-            <Entry x:Name="emailEntry" Placeholder="Correo electronico" Keyboard="Email"/>
-            <Entry x:Name="telefonoEntry" Placeholder="Telefono" Keyboard="Telephone"/>
-            <Button Text="Listo!"></Button>
-            <Entry Text="Prueba Estidolos" />
-            <Entry Text="Prueba Estidolos con llave" Style="{StaticResource estiloAdicional}"/>
-            
+            <Entry x:Name="nombreEntry" 
+                   Placeholder="Nombre"/>
+            <Entry x:Name="apellidoEntry" 
+                   Placeholder="Apellido"/>
+            <Entry x:Name="emailEntry" 
+                   Placeholder="Correo electronico" 
+                   Keyboard="Email"/>
+            <Entry x:Name="telefonoEntry" 
+                   Placeholder="Telefono" 
+                   Keyboard="Telephone"/>
+            <Button Text="Guardar" Clicked="Button_Clicked" 
+                   />
+
+            <!--<Entry Text="Prueba Estidolos" />
+            <Entry Text="Prueba Estidolos con llave" 
+            Style="{StaticResource estiloAdicional}"/>
+            !-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

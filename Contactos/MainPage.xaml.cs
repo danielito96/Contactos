@@ -13,5 +13,10 @@ namespace Contactos
         {
             InitializeComponent();
         }
+
+        private void ToolbarItem_Clicked(Object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new NuevoContactoPage());
+        }
     }
 }
