@@ -10,5 +10,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="NuevoContactoPage.cs" />
+    <Compile Remove="Clases\propfull.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Clases\" />
   </ItemGroup>
 </Project>
