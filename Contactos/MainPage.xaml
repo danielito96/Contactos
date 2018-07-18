@@ -9,5 +9,16 @@
         <ToolbarItem Text="Agregar" Clicked="ToolbarItem_Clicked"/>
         
     </ContentPage.ToolbarItems>
+
+    <ListView>
+        <ListView.ItemTemplate>
+
+        <DataTemplate>
+                <TextCell Text="{Binding Nombre}" 
+                          Detail="{Binding Apellido}"/>
+            </DataTemplate>
+            
+        </ListView.ItemTemplate>
+    </ListView>
     
 </ContentPage>
