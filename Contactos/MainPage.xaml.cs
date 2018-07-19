@@ -10,6 +10,9 @@ namespace Contactos
 {
     public partial class MainPage : ContentPage
     {
+        
+
+
         List<Contacto> contactos;
 
         public MainPage()
@@ -17,6 +20,16 @@ namespace Contactos
             InitializeComponent();
 
             contactos = new List<Contacto>();
+
+            contactosListView.ItemSelected += ContactosListView_ItemSelected;
+        }
+
+        void ContactosListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var contactoSeleccionado = e.SelectedItem as Contacto;
+
+            Navigation.PushAsync(new DetallesContactoPage(contactoSeleccionado));
+
         }
 
         protected override void OnAppearing()
@@ -27,6 +40,8 @@ namespace Contactos
             {
                 conn.CreateTable<Contacto>();
                 contactos = conn.Table<Contacto>().ToList();
+
+                contactosListView.ItemsSource = contactos;
 
             }
         }
