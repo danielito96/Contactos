@@ -10,7 +10,7 @@
         
     </ContentPage.ToolbarItems>
 
-    <ListView>
+    <ListView x:Name="contactosListView">
         <ListView.ItemTemplate>
 
         <DataTemplate>
