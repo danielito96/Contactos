@@ -31,6 +31,8 @@ namespace Contactos
                 conn.Insert(nuevoContacto);
             }
 
+            Navigation.PushAsync(new MainPage());
+
 
         }
     }
