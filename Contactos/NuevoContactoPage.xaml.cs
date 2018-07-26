@@ -14,7 +14,7 @@ namespace Contactos
 
        
 
-        private void Button_Clicked(Object  sender, EventArgs args)
+        private async void Button_Clicked(Object  sender, EventArgs args)
         {
             Contacto nuevoContacto = new Contacto()
             {
@@ -25,13 +25,24 @@ namespace Contactos
 
             };
 
-            using(var conn = new SQLite.SQLiteConnection(App.RUTA_BD))
-            {
-                conn.CreateTable<Contacto>();
-                conn.Insert(nuevoContacto);
-            }
+            //using(var conn = new SQLite.SQLiteConnection(App.RUTA_BD))
+            //{
+            //    conn.CreateTable<Contacto>();
+            //    conn.Insert(nuevoContacto);
+            //}
 
-            Navigation.PushAsync(new MainPage());
+            try
+            {
+                await App.MobileServiceClient.GetTable<Contacto>().InsertAsync(nuevoContacto);
+                await DisplayAlert("Éxito", "El contacto fue insertado correctamente", "ok");
+            }
+            catch(Exception e)
+            {
+                await DisplayAlert("Error", "El contacto no pudo ser insertado", "ok");
+
+            }
+           
+            await Navigation.PushAsync(new MainPage());
 
 
         }

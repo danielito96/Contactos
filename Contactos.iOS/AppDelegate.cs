@@ -1,9 +1,10 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 using Foundation;
+using Microsoft.WindowsAzure.MobileServices;
 using UIKit;
 
 namespace Contactos.iOS
@@ -24,6 +25,8 @@ namespace Contactos.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            CurrentPlatform.Init();
 
 
             string nombreArchivo = "bd_contactos.sqlite";
