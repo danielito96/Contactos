@@ -36,10 +36,9 @@ namespace Contactos
                 await App.MobileServiceClient.GetTable<Contacto>().InsertAsync(nuevoContacto);
                 await DisplayAlert("Éxito", "El contacto fue insertado correctamente", "ok");
             }
-            catch(Exception e)
+            catch(Exception)
             {
                 await DisplayAlert("Error", "El contacto no pudo ser insertado", "ok");
-
             }
            
             await Navigation.PushAsync(new MainPage());
